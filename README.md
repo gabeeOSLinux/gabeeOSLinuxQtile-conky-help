@@ -8,7 +8,7 @@ sh ~/.config/conky/start.sh &
 
 Add these two lines to Qtile's config.py file:
 
-# Show conky help
+    # Show conky help
      Key([mod, "control"], "s", lazy.spawn(os.path.expanduser("~/.config/conky/showconkyhelp.sh")), desc="Show conky help"),
     
      # Hide conky help
