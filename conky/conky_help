@@ -1,0 +1,123 @@
+--[[ Conky config i3 ]]
+conky.config = {
+
+	background = true, 							
+	double_buffer = true,						
+	text_buffer_size = 2048,					
+	update_interval = 1,				-- update interval
+	
+	--Placement
+
+	alignment = 'top_left',		            -- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
+
+	gap_x = 120,									-- pixels between right or left border
+	gap_y = 150,									-- pixels between bottom or left border
+	minimum_width = 400,
+	maximum_width = 400,						-- minimum height of window
+	border_inner_margin = 5, 					-- margin between border and text
+	border_outer_margin = 5, 					-- margin between border and edge of window
+	border_width = 0, 							-- border width in pixels
+	default_shade_color = '#000000',			-- default shading colour
+	default_outline_color = '#000000',			-- default outline colour
+	draw_borders = false,						-- draw borders around text
+	draw_graph_borders = true,					-- draw borders around graphs
+	draw_shades = false,						-- draw shades
+	draw_outline = false,						-- draw outline
+	stippled_borders = 0,						-- dashing the border
+	extra_newline = false,						-- extra newline at the end - for asesome's wiboxes
+	format_human_readable = true,				-- KiB, MiB rather then number of bytes
+	font = 'Cantarell:regular:size=6',  			-- font for complete conky unless in code defined
+	max_text_width = 0,							-- 0 will make sure line does not get broken if width too smal
+	max_user_text = 16384,						-- max text in conky default 16384
+	override_utf8_locale = true,				-- force UTF8 requires xft
+	short_units = true,							-- shorten units from KiB to k
+	top_name_width = 21,						-- width for $top name value default 15
+	top_name_verbose = false,					-- If true, top name shows the full command line of  each  process - Default value is false.
+	uppercase = false,							-- uppercase or not
+	use_spacer = 'none',						-- adds spaces around certain objects to align - default none
+	use_xft = true,								-- xft font - anti-aliased font
+	xftalpha = 1,								-- alpha of the xft font - between 0-1
+        
+	--Windows
+
+	own_window = true,							-- create your own window to draw
+	own_window_argb_value = 200,			    -- real transparency - composite manager required 0-255
+	own_window_argb_visual = true,				-- use ARGB - composite manager required
+	own_window_class = 'Conky',					-- manually set the WM_CLASS name for use with xprop
+	own_window_colour = '#000000',				-- set colour if own_window_transparent no
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',  -- if own_window true - just hints - own_window_type sets it
+	own_window_transparent = true,				-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_title = 'system_conky',			-- set the name manually  - default conky "hostname"
+	own_window_type = 'override',				-- if own_window true options are: normal/override/dock/desktop/panel
+
+
+	--Colours
+
+	color0 = '#f4f6f7',
+        color1 = '#FFFFFF',
+
+};
+
+conky.text = [[
+
+${color0}${hr}${color}
+${color0}[Sup] + [Ctrl] + h${alignr}${color1}Hide this conky help${color}
+${color0}[Sup] + [Ctrl] + s${alignr}${color1}Show this conky help${color}
+${color0}${hr}${color}
+
+${color0}${hr}${color}
+${color0}${alignc}Launcher Rofi menu${color}
+${color0}${hr}${color}
+${color0}[Sup] + r${alignr}${color1}Launcher menu${color}
+${color0}${hr}${color}
+
+${color0}${hr}${color}
+${color0}${alignc}Applications${color}
+${color0}${hr}${color}
+${color0}[Sup] + Return${alignr}${color1}Terminal${color}
+${color0}[Sup] + f${alignr}${color1}Firefox${color}
+${color0}[Sup] + t${alignr}${color1}Thunar${color}
+${color0}[Sup] + c${alignr}${color1}VSCode${color}
+${color0}[Sup] + s${alignr}${color1}Screenshot${color}
+${color0}${hr}${color}
+
+${color0}${alignc}Qtile keybindings windows${color}
+${color0}${hr}${color}
+${color0}[Sup] + left${alignr}${color1}Move focus to left${color}
+${color0}[Sup] + right${alignr}${color1}Move focus to right${color}
+${color0}[Sup] + down${alignr}${color1}Move focus down${color}
+${color0}[Sup] + up${alignr}${color1}Move focus up${color}
+${color0}[Alt] + [Tab]${alignr}${color1}Move window focus to other window${color}
+
+${color0}[Sup] + [Shift] + left${alignr}${color1}Move window to the left${color}
+${color0}[Sup] + [Shift] + right${alignr}${color1}Move window to the right${color}
+${color0}[Sup] + [Shift] + down${alignr}${color1}Move window down${color}
+${color0}[Sup] + [Shift] + up${alignr}${color1}Move window up${color}
+
+${color0}[Sup] + m${alignr}${color1}Toggle minimize${color}
+${color0}[Sup] + [Shift] + m${alignr}${color1}Toggle maximize${color}
+${color0}[Sup] + k${alignr}${color1}Toggle floating${color}
+${color0}[Sup] + [Shift] + k${alignr}${color1}Toggle fullscreen${color}
+
+${color0}${hr}${color}
+${color0}[Alt] + q${alignr}${color1}Kill focused window${color}
+${color0}[Sup] + [Control] + r${alignr}${color1}Reload the config${color}
+${color0}${hr}${color}
+
+${color0}${hr}${color}
+${color0}${alignc}XBPS${color}
+${color0}${hr}${color}
+${color0}upgrade${alignr}${color1}upgrade system${color}
+${color0}install  «package»${alignr}${color1}Install package${color}
+${color0}remove  «package»${alignr}${color1}Remove package${color}
+${color0}find  «package»${alignr}${color1}Search package${color}
+${color0}orphan  ${alignr}${color1}Delete orphan package${color}
+${color0}clean  ${alignr}${color1}Clear cache${color}
+
+${color0}${hr}${color}
+${color0}${alignc}Power off${color}
+${color0}${hr}${color}
+${color0}[Sup] + [Ctrl] + p${alignr}${color1}Powermenu${color}
+
+
+]];
