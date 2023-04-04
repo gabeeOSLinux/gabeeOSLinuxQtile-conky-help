@@ -3,8 +3,8 @@
 Put the folder in .config.
 Add the following line to the .xinitrc file:
 
- # Conky
-sh ~/.config/conky/start.sh &
+    # Conky
+    sh ~/.config/conky/start.sh &
 
 Add these two lines to Qtile's config.py file:
 
