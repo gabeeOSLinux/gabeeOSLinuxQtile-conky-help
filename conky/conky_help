@@ -3,21 +3,20 @@ conky.config = {
 
 --  Created : 2022/Jul/19
 --  this theme is for conky version 1.10.8 or newer
--- 
---  GRUMIUM
+
+--  Inspired in --  GRUMIUM
 --  ( A part of Draco Conky themes pack )
---
---  author  : Closebox73
+--  by Closebox73
 --  license : Distributed under the terms of GPLv3
---  notes   : Created on 1366x768 Monitor
+
 
 --==============================================================================
 
 -- Size and Position settings --
   alignment = 'top_left',
-  gap_x = 0,
+  gap_x = 40,
   gap_y = 100,
-  maximum_width = 350,
+  maximum_width = 360,
   minimum_height = 890,
   minimum_width = 400,
   
@@ -67,7 +66,8 @@ conky.config = {
 
 conky.text = [[
 
-${image ~/.config/conky/bg.png -p 0,0 -s 360x890}\
+${color0}${hr}${color}
+${color B03A2E}${alignc}gabeeOSLinux Qtile${color}
 ${color0}${hr}${color}
 ${color0}[Sup] + [Ctrl] + h${alignr}${color1}Hide this conky help${color}
 ${color0}[Sup] + [Ctrl] + s${alignr}${color1}Show this conky help${color}
@@ -124,7 +124,7 @@ ${color0}[Sup] + [Alt] + q${alignr}${color1}Shutdown Qtile${color}
 #${color0}${hr}${color}
 ${color0}${alignc}XBPS${color}
 ${color0}${hr}${color}
-${color0}upgrade${alignr}${color1}upgrade system${color}
+${color0}upgrade${alignr}${color1}Upgrade system${color}
 ${color0}install  «package»${alignr}${color1}Install package${color}
 ${color0}remove  «package»${alignr}${color1}Remove package${color}
 ${color0}find  «package»${alignr}${color1}Search package${color}
@@ -135,6 +135,6 @@ ${color0}${hr}${color}
 ${color0}${alignc}Power off${color}
 ${color0}${hr}${color}
 ${color0}[Sup] + [Ctrl] + p${alignr}${color1}Powermenu${color}
-
+${color0}${hr}${color}
 
 ]];
