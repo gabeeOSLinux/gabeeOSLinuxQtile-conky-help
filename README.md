@@ -19,3 +19,7 @@ Add these two lines to Qtile's config.py file:
     
      # Hide conky help
      Key([mod, "control"], "h", lazy.spawn(os.path.expanduser("~/.config/conky/hideconkyhelp.sh")), desc="Show conky help"),
+
+
+
+Modifying a conky by closebox73
