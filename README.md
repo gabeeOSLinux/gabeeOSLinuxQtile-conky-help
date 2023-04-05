@@ -6,6 +6,8 @@ Add the following line to the .xinitrc file:
     # Conky
     sh ~/.config/conky/start.sh &
     
+  Make scripts executable
+  
     chmod +x showconkyhelp.sh
     chmod +x hideconkyhelp.sh
     chmod +x start.sh
