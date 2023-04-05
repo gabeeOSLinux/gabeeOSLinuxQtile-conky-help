@@ -22,4 +22,4 @@ Add these two lines to Qtile's config.py file:
 
 
 
-Modifying a conky by closebox73
+Inspired by a conky by closebox73
